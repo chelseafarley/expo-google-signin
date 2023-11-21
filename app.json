@@ -14,10 +14,24 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      "@react-native-google-signin/google-signin"
+    ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.misscoding.googleauthexporeactnative",
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.72307864794-1vuq2apibl4tg6on2f2nmoq5vul3ltvq"
+            ]
+          }
+        ]
+      }
     },
     "android": {
+      "package": "com.misscoding.googleauthexporeactnative",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +39,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6766daa7-0e2b-4a4e-8bea-3283b8c89a68"
+      }
     }
   }
 }
